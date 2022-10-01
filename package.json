@@ -21,7 +21,9 @@
     "eslint-plugin-import": "^2.22.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "test:all": "npm run test:calculator && npm run test:nombreejercicio",
+    "test:calculator": "npm test calculator.spec.js"
   },
   "eslintConfig": {
     "root": true
