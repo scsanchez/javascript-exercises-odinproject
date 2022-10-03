@@ -22,8 +22,8 @@
   },
   "scripts": {
     "test": "jest --watchAll",
-    "test:all": "npm run test:calculator && npm run test:nombreejercicio",
-    "test:calculator": "npm test calculator.spec.js"
+    "test:all": "npm run test:palindromes && npm run test:nombreejercicio",
+    "test:palindromes": "npm test palindromes.spec.js"
   },
   "eslintConfig": {
     "root": true
