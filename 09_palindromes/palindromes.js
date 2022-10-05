@@ -1,17 +1,15 @@
-const palindromes = function (string) {
-  let splitString = string.split("");
-  let reverseArray = splitString.reverse();
-  let joinArray = reverseArray.join("");
-  let newArray = joinArray
+const palindromes = function (str) {
+  const letters = str
     .toLowerCase()
-    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-  let splitString2 = newArray.split("");
-  let reverseArray2 = splitString2.reverse();
-  let joinArray2 = reverseArray2.join("");
-  return (
-    string.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "") ==
-    joinArray2
-  );
+    .split(/[\s,!\.]/)
+    .join("");
+  const half = Math.floor(letters.length / 2);
+  for (let i = 0; i < half; ++i) {
+    const start = letters[i];
+    const end = letters[letters.length - 1 - i];
+    if (start !== end) return false;
+  }
+  return true;
 };
 
 // Do not edit below this line
