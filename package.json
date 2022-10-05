@@ -22,8 +22,8 @@
   },
   "scripts": {
     "test": "jest --watchAll",
-    "test:all": "npm run test:palindromes && npm run test:nombreejercicio",
-    "test:palindromes": "npm test palindromes.spec.js"
+    "test:all": "npm run test:fibonacci && npm run test:nombreejercicio",
+    "test:fibonacci": "npm test fibonacci.spec.js"
   },
   "eslintConfig": {
     "root": true
